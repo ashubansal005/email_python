@@ -1,0 +1,17 @@
+import smt.plib
+smt purser='Enter your mail'
+smt ppass='password'
+toadd='email2'
+fromadd=smtpuser
+subject='something'
+header='To:'+toadd+'\n'+'From:'+Fromadd+'\n'+"subject"+subject
+body='hello'
+message=header+'\n\n'+body
+print(message)
+s=smtplib.SMTP('smtp.gmail.com',587)
+s.ehlo()
+s.starttls()
+s.ehlo()
+s.login(smtpuser,smtppass)
+s.sendmail(fromadd,toadd,message)
+s.quit()
